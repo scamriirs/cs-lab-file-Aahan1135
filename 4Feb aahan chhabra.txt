@@ -1,0 +1,47 @@
+FACTORIAL USING RECURSION
+
+
+using System;
+
+class Program
+{
+    static int Factorial(int n)
+    {
+        if (n == 0) return 1;
+        return n * Factorial(n - 1);
+    }
+
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int num = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Factorial of {num} is {Factorial(num)}");
+    }
+}
+
+
+FIBONACCI SERIES
+
+using System;
+
+class Program
+{
+    static void PrintFibonacci(int n, int a = 0, int b = 1)
+    {
+        if (n <= 0) return; // Base case: stop when n reaches 0
+        Console.Write(a + " "); // Print current Fibonacci number
+        PrintFibonacci(n - 1, b, a + b); // Recursive call with updated values
+    }
+
+    static void Main()
+    {
+        Console.Write("Enter the number of terms: ");
+        int num = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Fibonacci Series:");
+        PrintFibonacci(num);
+    }
+}
+
+
+
